@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {
   const isProduction = env === "production";
-  // const CSSExtract = new ExtractTextPlugin("styles.scss");
+  // const CSSExtract = new ExtractTextPlugin("styles.css");
 
   return {
     entry: "./src/app.js",
@@ -40,7 +40,7 @@ module.exports = (env) => {
         },
       ],
     },
-    plugins: [new MiniCssExtractPlugin("styles.scss")],
+    plugins: [new MiniCssExtractPlugin({})],
     devtool: isProduction ? "source-map" : "cheap-module-eval-source-map",
     devServer: {
       contentBase: path.join(__dirname, "public"),
