@@ -1,5 +1,5 @@
 {
-  "name": "indecision-app",
+  "name": "budget-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -46,7 +46,9 @@
     "enzyme-to-json": "^3.5.0",
     "enzyme-adapter-react-16": "^1.15.4",
     "react-test-renderer": "^16.13.1",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "jest": "^26.4.2",
+    "live-server": "^1.2.1"
   },
   "scripts": {
     "build:dev": "webpack",
@@ -54,9 +56,8 @@
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
     "start": "node server/server.js",
-    "heroku-postbuild": "npm run build:prod",
-    "jest": "^26.4.2",
-    "live-server": "^1.2.1"
+    "heroku-postbuild": "npm run build:prod"
+
   },
   "author": "",
   "license": "ISC"
